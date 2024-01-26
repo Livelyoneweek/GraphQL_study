@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @MutationMapping
-    public User save(@Argument Long id, @Argument String name, @Argument String email){
+    public User save(@Argument String name, @Argument String email){
         User user = User.builder()
                 .name(name)
                 .email(email)
