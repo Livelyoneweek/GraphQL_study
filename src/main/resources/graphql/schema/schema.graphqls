@@ -1,0 +1,14 @@
+type User {
+    id: ID
+    name: String
+    email: String
+}
+
+type Query {
+    getMember(id: ID!): User
+    getMembers: [User]
+}
+
+type Mutation {
+    save(name: String!, email: String!): User
+}

@@ -1,3 +1,34 @@
 # GraphQL
 
 ## spring boot3, java17, jpa, lombok, Embedded h2
+
+---
+
+### db url path = jdbc:h2:~/test;AUTO_SERVER=TRUE
+
+```
+유저 저장
+mutation {
+    save(name: "John Doe3", email: "john3.doe@example.com") {
+        name
+        email
+    }
+}
+
+유저 조회
+query{
+    getMember(id:"1"){
+        id
+        name
+    }
+}
+
+유저 리스트 조회
+query{
+    getMembers{
+        id
+        name
+    }
+}
+
+```
